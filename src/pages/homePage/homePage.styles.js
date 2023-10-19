@@ -14,8 +14,8 @@ export const HomePageContainer = styled.div`
         overflow: hidden;
         transition: 0.8s;
         position: fixed;
-        top:  ${({pos}) => 
-        pos === 'show' ? '0%': '-20%'}; 
+        top: ${({pos}) => 
+            pos === 'show' ? '0%': '-20%'}; 
         left: 0%;
         z-index: -1;
 
@@ -33,9 +33,7 @@ export const HomePageContainer = styled.div`
         font-weight: bold;
         height: 35px;
         width: 35px;
-        /* display: flex;
-        justify-content: center;
-        align-items: center; */
+        text-align: center;
         position: fixed;
         top: 2%;
         right: 6%;
@@ -44,14 +42,16 @@ export const HomePageContainer = styled.div`
     }
     
     .pic-box {
-        padding: 10%;
+        padding-top: 10%;
         height: auto;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
 
         img {
             background-color: white;
             border: 4px solid white;
+            margin-bottom: 4%;
             width: ${({pos}) => 
             pos === 'show' ? '80px': '105px'}; 
             height: auto;
@@ -59,19 +59,11 @@ export const HomePageContainer = styled.div`
             transition: 0.7s;
             position: relative;
             top: ${({pos}) => 
-            pos === 'show' ? '100%': '0%'};
+                pos === 'show' ? '100%': '0%'};
             left: ${({pos}) => 
-            pos === 'show' ? '-45%': '0%'};
+                pos === 'show' ? '-35%': '0%'};
             /* margin-top: 5%; */ 
         }
-    }
-    
-    .overview {
-        padding: o;
-        /* background-color: green; */
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
     }
     
     .add {
@@ -83,62 +75,5 @@ export const HomePageContainer = styled.div`
         text-align: center;
         bottom: 8%;
     
-    }
-    
-    h2 {
-        margin: 0;
-        text-align: center;
-    }
-    
-    .info {
-        /* width: 90%; */
-        padding: 4px 10% 0 10%;
-        text-align: center;
-        /* align-self: center; */
-    }
-    
-    .contacts {
-        padding: 2% 5% 2% 5%;
-        text-align: center;
-    }
-    
-    svg {
-    margin: 6px;
-    }
-    
-    /* .icon-box {
-    width: 5px;
-    height: 5px;
-    } */
-    
-    /* 
-    @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-    } */
-    
-    /* .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-    }
-    
-    .App-link {
-    color: #61dafb;
-    } */
-    
-    @keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
     }
 `;

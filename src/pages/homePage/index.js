@@ -1,27 +1,30 @@
 import { useState } from 'react';
 
+import MiniHomePage from '../miniHomePage';
+import FullHomePage from '../fullHomePage';
+
 import img from '../../image/me2.jpg';
 import cover from '../../image/cover.jpg';
-import Threads from '../../components/icons/threads';
-import X from '../../components/icons/x';
-import Facebook from '../../components/icons/facebook';
-import Instagram from '../../components/icons/instagram';
-import Medium from '../../components/icons/medium';
-import Linkedin from '../../components/icons/linkedin';
-import Quora from '../../components/icons/quora';
-import Reddit from '../../components/icons/reddit';
-import Tumblr from '../../components/icons/tumblr';
-import Whatsapp from '../../components/icons/whatsapp';
+
 
 import { HomePageContainer } from './homePage.styles';
 
 
 const HomePage = () => {
+  const [ miniFull, setMiniFull ] = useState('+');
   const [ covered, setCovered ] = useState('no-show');
+  const [ page, setPage ] = useState(<MiniHomePage />);
 
   const showFull = () => {
-    covered === 'no-show' ? 
-      setCovered('show') : setCovered('no-show');
+    if (covered === 'no-show') {
+      setCovered('show')
+      setMiniFull('x')
+      setPage(<FullHomePage />)
+    } else{
+      setCovered('no-show')
+      setMiniFull('+')
+      setPage(<MiniHomePage />)
+    }
   };
 
   return (
@@ -35,26 +38,8 @@ const HomePage = () => {
           <img src={img} alt='me' />
         </span>
       </div>
-      <div className="overview">
-        <h2>@placeofgod</h2>
-        <div className="info">Digital business consultant, computer scientist and project manager.</div>
-      </div>
-      <div className="contacts">
-        <Whatsapp />
-        <Facebook />
-        <Linkedin />
-        <Instagram />
-        <Medium />
-        <Quora />
-        <Reddit />
-        <Tumblr />
-        <Threads />
-        <X />
-      </div>
-      <div>
-
-      </div>
-      <div className="add" onClick={showFull}>+</div>
+      {page}
+      <div className="add" onClick={showFull}>{miniFull}</div>
     </HomePageContainer>
   );
 }
