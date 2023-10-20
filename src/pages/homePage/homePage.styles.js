@@ -1,6 +1,25 @@
 import styled from 'styled-components';
 
 export const HomePageContainer = styled.div`
+    width: 100%;
+    height: 100%;
+    max-width: 900px;
+    align-self: center;
+    // background-color: blue;
+    position: absolute;
+
+    .menu {
+        font-weight: bold;
+        height: 35px;
+        width: 35px;
+        text-align: center;
+        position: fixed;
+        top: 2%;
+        right: ${window.screen.width <= 1000 ? '5%' : '10%'};
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
     .header {
         width: 100%;
         padding-top: 10%;
@@ -10,12 +29,13 @@ export const HomePageContainer = styled.div`
     
     .cover-box {
         width: 100%;
-        height: 15%;
+        height: ${window.screen.width <= 1000 ? '15%' : '25%'};
+        // max-width: 900px;
         overflow: hidden;
         transition: 0.8s;
-        position: fixed;
+        position: absolute;
         top: ${({pos}) => 
-            pos === 'show' ? '0%': '-20%'}; 
+            pos === 'show' ? '0%': '-30%'}; 
         left: 0%;
         z-index: -1;
 
@@ -29,17 +49,7 @@ export const HomePageContainer = styled.div`
         }
     }
     
-    .menu {
-        font-weight: bold;
-        height: 35px;
-        width: 35px;
-        text-align: center;
-        position: fixed;
-        top: 2%;
-        right: 6%;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.5);
-    }
+    
     
     .pic-box {
         padding-top: 10%;
@@ -71,6 +81,7 @@ export const HomePageContainer = styled.div`
         /* font-weight: bold; */
         font-size: 40px;
         width: 100%;
+        max-width: 900px;
         position: fixed;
         text-align: center;
         bottom: 8%;

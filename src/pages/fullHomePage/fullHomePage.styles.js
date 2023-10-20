@@ -9,8 +9,13 @@ export const FullHomeBox = styled.div`
 `;
 
 export const Overview = styled.div`
-    padding-left: 8px;
-    margin-top: 44%;
+    padding-left: ${window.screen.width <= 1000 ? '2.2%' : '15%'};
+    margin-top: ${
+        window.screen.width <= 500 
+        ? '44%' 
+        : window.screen.width <= 1000
+        ? '33%' : '22%'
+    };
     // background-color: green;
     flex-direction: column;
     // text-align: center;
@@ -32,6 +37,7 @@ export const Overview = styled.div`
 export const Menu = styled.div`
     font-weight: bold;
     padding: 3%;
+    padding-left:  ${window.screen.width <= 1000 ? '2.2%' : '14.4%'};
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     
 
