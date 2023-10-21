@@ -1,5 +1,7 @@
 import { icons } from "../../assets/iconAssets/icons";
 
+import { LinkPreview } from '@dhaiwat10/react-link-preview';
+
 import { Overview, Contacts } from "./miniHomePage.styles";
 
 const MiniHomePage = () => {
@@ -35,7 +37,7 @@ const MiniHomePage = () => {
                 <X />
             </Contacts>
             <div>
-
+                {/* <LinkPreview url='https://www.youtube.com/watch?v=dQw4w9WgXcQ' width='400px' /> */}
             </div>
         </>
     )
