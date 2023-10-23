@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://placeofgod.github.io",
+  "homepage": "https://placeofgod.github.io/placeofgod.github.io",
   "private": true,
   "dependencies": {
     "@dhaiwat10/react-link-preview": "^1.15.0",
