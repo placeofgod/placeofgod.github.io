@@ -3,20 +3,20 @@ import styled from 'styled-components';
 export const FullHomeBox = styled.div`
     height: 100%;
     width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
     overflow: scroll;
 `;
 
 export const Overview = styled.div`
     padding-left: ${window.screen.width <= 1000 ? '2.2%' : '15%'};
-    margin-top: ${
+   { margin-top: ${
         window.screen.width <= 500 
         ? '44%' 
         : window.screen.width <= 1000
         ? '33%' : '22%'
-    };
+    };}
     // background-color: green;
     flex-direction: column;
     // text-align: center;
@@ -49,17 +49,17 @@ export const Menu = styled.div`
     
     .about {
         border-bottom: ${({picked}) => 
-            picked === 0 ? 'solid': null};
+            picked === 0 ? '3px solid': null};
     }
 
     .reviews {
         border-bottom: ${({picked}) => 
-            picked === 1 ? 'solid': null};
+            picked === 1 ? '3px solid': null};
     }
 
     .blogs {
         border-bottom: ${({picked}) => 
-            picked === 2 ? 'solid': null};
+            picked === 2 ? '3px solid': null};
     }
 `;
 
@@ -72,7 +72,8 @@ export const MainBox = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    margin-bottom: 50%;
+
     img {
         width: 80%;
         max-width: 400px;
