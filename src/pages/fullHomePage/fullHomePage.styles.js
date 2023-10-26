@@ -6,6 +6,7 @@ export const FullHomeBox = styled.div`
     position: fixed;
     top: 0;
     left: 0;
+    overflow: scroll;
 `;
 
 export const Overview = styled.div`
@@ -59,5 +60,28 @@ export const Menu = styled.div`
     .blogs {
         border-bottom: ${({picked}) => 
             picked === 2 ? 'solid': null};
+    }
+`;
+
+
+export const MainBox = styled.div`
+    // height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    img {
+        width: 80%;
+        max-width: 400px;
+        padding-bottom: 10px;
+    }
+
+    p {
+        width: 95%;
+        margin: 0;
+        padding-bottom: 10px;
     }
 `;

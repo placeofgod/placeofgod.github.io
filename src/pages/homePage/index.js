@@ -4,7 +4,7 @@ import MiniHomePage from '../miniHomePage';
 import FullHomePage from '../fullHomePage';
 
 import img from '../../image/me2.jpg';
-import cover from '../../image/cover.jpg';
+import cover from '../../image/cover2.jpg';
 
 
 import { HomePageContainer } from './homePage.styles';

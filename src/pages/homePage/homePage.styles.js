@@ -29,7 +29,7 @@ export const HomePageContainer = styled.div`
     
     .cover-box {
         width: 100%;
-        height: ${window.screen.width <= 1000 ? '15%' : '25%'};
+        height: ${window.screen.width <= 1000 ? '17%' : '25%'};
         // max-width: 900px;
         overflow: hidden;
         transition: 0.8s;
@@ -41,7 +41,7 @@ export const HomePageContainer = styled.div`
 
         img {
             width: 100%;
-            height: 144%;
+            height: 140%;
             padding: 0;
             margin: 0;
             position: relative;
