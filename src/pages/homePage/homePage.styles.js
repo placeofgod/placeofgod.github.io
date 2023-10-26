@@ -78,8 +78,7 @@ export const HomePageContainer = styled.div`
     
     .add {
         /* height: 100%; */
-        /* font-weight: bold; */
-        font-size: 40px;
+        font-size: 30px;
         width: 100%;
         max-width: 900px;
         position: fixed;
